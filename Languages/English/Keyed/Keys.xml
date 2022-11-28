@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Deco.hungby>{0}, hung up by: {1}</Deco.hungby>
+  <Deco.inspectposter>Inspect Poster</Deco.inspectposter>
+  <Deco.inspectposterinfo>Take a closer look at the poster that one of your colonists hung up</Deco.inspectposterinfo>
+  <Deco.inspect>Inspect Decoration</Deco.inspect>
+  <Deco.inspectinfo>Take a closer look at the decoration that one of your colonists hung up</Deco.inspectinfo>
+  <Deco.walllimit>Wall decoration limit: {0}</Deco.walllimit>
+  <Deco.ceilinglimit>Ceiling decoration limit: {0}</Deco.ceilinglimit>
+  <Deco.cooldown>Decoration cooldown: {0}</Deco.cooldown>
+  <Deco.remove>Remove all decorations</Deco.remove>
+  <Deco.removeconfirm>Are you sure you want to remove all decorations?</Deco.removeconfirm>
+  <Deco.reset>Restore To Default Settings</Deco.reset>
+  <Deco.resetconfirm>Are you sure you want to restore Colonists' Deco's settings?</Deco.resetconfirm>
+  <Deco.currentModVersion>Installed mod-version: {0}</Deco.currentModVersion>
+</LanguageData>

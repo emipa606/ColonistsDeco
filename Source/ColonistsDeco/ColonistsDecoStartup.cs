@@ -1,13 +1,12 @@
 ﻿using Verse;
 
-namespace ColonistsDeco
+namespace ColonistsDeco;
+
+[StaticConstructorOnStartup]
+internal static class ColonistsDecoStartup
 {
-    [StaticConstructorOnStartup]
-    static class ColonistsDecoStartup
+    static ColonistsDecoStartup()
     {
-        static ColonistsDecoStartup()
-        {
-            Utility.LoadDefs();
-        }
+        Utility.LoadDefs();
     }
 }

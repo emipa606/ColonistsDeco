@@ -1,12 +1,11 @@
 ﻿using Verse;
 
-namespace ColonistsDeco
+namespace ColonistsDeco;
+
+internal class CompProperties_PawnDeco : CompProperties
 {
-    class CompProperties_PawnDeco : CompProperties
+    public CompProperties_PawnDeco()
     {
-        public CompProperties_PawnDeco()
-        {
-            compClass = typeof(CompPawnDeco);
-        }
+        compClass = typeof(CompPawnDeco);
     }
 }

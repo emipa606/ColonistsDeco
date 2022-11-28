@@ -2,18 +2,10 @@
 using RimWorld;
 using Verse;
 
-namespace ColonistsDeco
-{
-    public enum DecoLocationType
-    {
-        Wall,
-        Ceiling,
-        Bedside
-    }
+namespace ColonistsDeco;
 
-    class DecoModExtension : DefModExtension
-    {
-        public readonly List<TechLevel> decoTechLevels = new List<TechLevel>();
-        public DecoLocationType decoLocationType;
-    }
+internal class DecoModExtension : DefModExtension
+{
+    public DecoLocationType decoLocationType;
+    public List<TechLevel> decoTechLevels = new List<TechLevel>();
 }

@@ -1,21 +1,19 @@
 ﻿using Verse;
 
-namespace ColonistsDeco
+namespace ColonistsDeco;
+
+public class CompDecoration : ThingComp
 {
-    public class CompDecoration : ThingComp
+    public string decorationCreator;
+
+    public string decorationName;
+    public CompProperties_Decoration Props => (CompProperties_Decoration)props;
+
+    public override void Initialize(CompProperties props)
     {
-        public CompProperties_Decoration Props => (CompProperties_Decoration)props;
+        base.Initialize(props);
 
-        public string decorationName;
-
-        public string decorationCreator;
-
-        public override void Initialize(CompProperties compProps)
-        {
-            base.Initialize(compProps);
-
-            decorationName = Props.decorationName;
-            decorationCreator = "Unknown";
-        }
+        decorationName = Props.decorationName;
+        decorationCreator = "Unknown".Translate();
     }
 }

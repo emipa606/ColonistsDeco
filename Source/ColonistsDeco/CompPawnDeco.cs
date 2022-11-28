@@ -1,41 +1,48 @@
 ﻿using System;
 using Verse;
 
-namespace ColonistsDeco
+namespace ColonistsDeco;
+
+internal class CompPawnDeco : ThingComp
 {
-    class CompPawnDeco : ThingComp
+    private int decoCooldown = ColonistsDecoMain.Settings.defaultDecoCooldown;
+
+    public int DecoCooldown => decoCooldown;
+
+    public bool CanDecorate => decoCooldown == 0;
+
+    public void ResetDecoCooldown()
     {
-        public bool CanDecorate => _decoCooldown == 0;
-
-        private int _decoCooldown = ColonistsDecoMain.settings.defaultDecoCooldown;
-
-        public void ResetDecoCooldown()
+        var random = new Random();
+        if (ColonistsDecoMain.Settings.defaultDecoCooldown != 0)
         {
-            Random random = new Random();
-            if (ColonistsDecoMain.settings.defaultDecoCooldown != 0)
-            {
-                _decoCooldown = ColonistsDecoMain.settings.defaultDecoCooldown + random.Next(30000);
-            } else
-            {
-                _decoCooldown = 0;
-            }
+            decoCooldown = ColonistsDecoMain.Settings.defaultDecoCooldown + random.Next(30000);
         }
-
-        public override void CompTick()
+        else
         {
-            base.CompTick();
-
-            if (_decoCooldown != 0)
-            {
-                _decoCooldown--;
-            }
+            decoCooldown = 0;
         }
+    }
 
-        public override void PostExposeData()
+    public void RemoveDecoCooldown()
+    {
+        decoCooldown = 0;
+    }
+
+    public override void CompTick()
+    {
+        base.CompTick();
+
+        if (decoCooldown != 0)
         {
-            base.PostExposeData();
-
-            Scribe_Values.Look(ref _decoCooldown, "decoCooldown", ColonistsDecoMain.settings.defaultDecoCooldown);
+            decoCooldown--;
         }
+    }
+
+    public override void PostExposeData()
+    {
+        base.PostExposeData();
+
+        Scribe_Values.Look(ref decoCooldown, "decoCooldown", ColonistsDecoMain.Settings.defaultDecoCooldown);
     }
 }

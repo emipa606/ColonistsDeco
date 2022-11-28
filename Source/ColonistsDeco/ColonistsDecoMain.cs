@@ -1,27 +1,29 @@
-﻿using ColonistsDeco.Settings;
+﻿using Mlie;
 using UnityEngine;
 using Verse;
 
-namespace ColonistsDeco
+namespace ColonistsDeco;
+
+internal class ColonistsDecoMain : Mod
 {
-	internal class ColonistsDecoMain : Mod
-	{
-		public static ColonistsDecoModSettings settings;
+    public static ColonistsDecoModSettings Settings;
+    public static string currentVersion;
 
-		public ColonistsDecoMain(ModContentPack content)
-			: base(content)
-		{
-			settings = GetSettings<ColonistsDecoModSettings>();
-		}
+    public ColonistsDecoMain(ModContentPack content)
+        : base(content)
+    {
+        Settings = GetSettings<ColonistsDecoModSettings>();
+        currentVersion =
+            VersionFromManifest.GetVersionFromModMetaData(ModLister.GetActiveModWithIdentifier("Mlie.ColonistsDeco"));
+    }
 
-		public override void DoSettingsWindowContents(Rect inRect)
-		{
-			settings.DoWindowContents(inRect);
-		}
+    public override void DoSettingsWindowContents(Rect inRect)
+    {
+        Settings.DoWindowContents(inRect);
+    }
 
-		public override string SettingsCategory()
-		{
-			return "Colonists' Deco";
-		}
-	}
+    public override string SettingsCategory()
+    {
+        return "Colonists' Deco";
+    }
 }

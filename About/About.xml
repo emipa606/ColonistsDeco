@@ -1,66 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Colonists' Deco</name>
-	<author>Abe Vriens</author>
-	<supportedVersions>
-		<li>1.2</li>
-		<li>1.3</li>
-	</supportedVersions>
-	<packageId>iemanddieabeheet.colonistsdeco</packageId>
-	<description>This mod adds the ability for colonists to decorate their own rooms.
+  <name>Colonists' Deco (Continued)</name>
+  <packageId>Mlie.ColonistsDeco</packageId>
+  <author>Abe Vriens</author>
+  <url>https://github.com/emipa606/ColonistsDeco</url>
+  <supportedVersions>
+    <li>1.2</li>
+    <li>1.3</li>
+    <li>1.4</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
+Update of Abe Vrienss mod
+https://steamcommunity.com/sharedfiles/filedetails/?id=2558083020
 
-Features:
+[img]https://i.imgur.com/pufA0kM.png[/img]
+
+[table]
+    [tr]
+        [td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+        [td][url=https://github.com/emipa606/ColonistsDeco][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+    [/tr]
+    [tr]
+        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
+        [td][img]https://i.imgur.com/Be8E2qJ.png[/img][/td]
+    [/tr]
+[/table]
+	
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
+[img]https://i.imgur.com/XNDcVTT.png[/img]
+
+
+[img]https://i.imgur.com/28eFc45.png[/img]
 - Colonists will decorate their bedroom with all kinds of decorations. Doing this levels up their construction skill.
-- The decorations that are hung up by your colonists reflect the tech level of your colony.
+- Decoration levels can be researched, each research reflects a different tech level.
 
-Planned:
+
+[img]https://i.imgur.com/6QOB71B.png[/img]
 - Add room specific decorations
 - Add customisable decorations
+[strike]- Add random poster images[/strike]
+[strike]- Add more placeable items[/strike]
+[strike]- Add UI button to preview decoration in full size[/strike]
 
-Camera+ is recommended if you want to see the decorations in detail.
+
+[img]https://i.imgur.com/D7Ig9n1.png[/img]
+
+[img]https://i.imgur.com/06Ybo2O.gif[/img]
+
+[img]https://i.imgur.com/Dbfd3PI.png[/img]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=867467808&amp;amp;searchtext=camera%2B]Camera+[/url] is recommended if you want to see the decorations in detail.
 
 Feel free to contact me if you have any problems with the mod.
 
 Current version - [V2.4.0]
-</description>
 
-<descriptionsByVersion>
+[url=https://github.com/IemandDieAbeHeet/ColonistsDeco]GitHub Repository[/url]
+[url=https://www.patreon.com/IemandDieAbeHeet]Become a Patron![/url]
+[url=https://discord.gg/SJvMexaqT6]Join the Discord server![/url]
 
-	<v1.2>This mod adds the ability for colonists to decorate their own rooms.
-
-	Features:
-	- Colonists will decorate their bedroom with all kinds of decorations. Doing this levels up their construction skill.
-	- The decorations that are hung up by your colonists reflect the tech level of your colony.
-
-	Planned:
-	- Add room specific decorations
-	- Add customisable decorations
-
-	Camera+ is recommended if you want to see the decorations in detail.
-
-	Feel free to contact me if you have any problems with the mod.
-
-	Current version - [V1.2.0]
-
-	</v1.2>
-
-</descriptionsByVersion>
-
-<loadAfter>
-		<li>Ludeon.RimWorld</li>
-        <li>Ludeon.RimWorld.Royalty</li>
-		<li>Ludeon.RimWorld.Ideology</li>
-		<li>brrainz.harmony</li>
-		<li>UnlimitedHugs.HugsLib</li>
-</loadAfter>
-
-<modDependencies>
-    <li>
-        <packageId>brrainz.harmony</packageId>
-        <displayName>Harmony</displayName>
-        <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
-        <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
-    </li>
-</modDependencies>
-
+[img]https://i.imgur.com/p7Fv1Z6.gif[/img]
+	
+[img]https://i.imgur.com/PwoNOj4.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[/list]</description>
 </ModMetaData>

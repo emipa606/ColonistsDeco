@@ -1,35 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
 using HarmonyLib;
 using RimWorld;
 using Verse;
 
-namespace ColonistsDeco
+namespace ColonistsDeco;
+
+[StaticConstructorOnStartup]
+public static class HarmonyPatches
 {
-    [StaticConstructorOnStartup]
-    public static class HarmonyPatches
+    private static readonly Type patchType = typeof(HarmonyPatches);
+
+    static HarmonyPatches()
     {
-        private static readonly Type PatchType = typeof(HarmonyPatches);
-        
-        static HarmonyPatches()
-        {
-            Harmony harmony = new Harmony(id: "rimworld.iemanddieabeheet.colonistsdeco");
+        var harmony = new Harmony("rimworld.iemanddieabeheet.colonistsdeco");
 
-            harmony.Patch(AccessTools.Method(typeof(BeautyUtility), nameof(BeautyUtility.CellBeauty)),
-                postfix: new HarmonyMethod(PatchType, nameof(CellBeautyPostfix)));
-        }
+        harmony.Patch(AccessTools.Method(typeof(BeautyUtility), nameof(BeautyUtility.CellBeauty)),
+            postfix: new HarmonyMethod(patchType, nameof(CellBeautyPostfix)));
+    }
 
-        public static void CellBeautyPostfix(ref float result, IntVec3 c, Map map)
+    public static void CellBeautyPostfix(ref float __result, IntVec3 c, Map map)
+    {
+        var cells = GenAdjFast.AdjacentCellsCardinal(c);
+        foreach (var cell in cells)
         {
-            List<IntVec3> cells = GenAdjFast.AdjacentCellsCardinal(c);
-            foreach (IntVec3 cell in cells)
+            foreach (var thing in cell.GetThingList(map))
             {
-                foreach(Thing thing in cell.GetThingList(map))
+                if (Utility.wallDecoDefs.Contains(thing.def) && thing.Position + thing.Rotation.FacingCell == c)
                 {
-                    if(Utility.wallDecoDefs.Contains(thing.def) && (thing.Position + thing.Rotation.FacingCell) == c)
-                    {
-                        result += thing.GetStatValue(StatDefOf.Beauty);
-                    }
+                    __result += thing.GetStatValue(StatDefOf.Beauty);
                 }
             }
         }

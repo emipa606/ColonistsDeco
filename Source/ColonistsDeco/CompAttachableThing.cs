@@ -1,47 +1,54 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Verse;
 
-namespace ColonistsDeco
+namespace ColonistsDeco;
+
+internal class CompAttachableThing : ThingComp
 {
-    class CompAttachableThing : ThingComp
+    public List<Thing> attachedThings = new List<Thing>();
+
+    public override void CompTick()
     {
-		public List<Thing> attachedThings = new List<Thing>();
-
-        public override void CompTick()
+        base.CompTick();
         {
-            base.CompTick();
+            if (attachedThings == null)
             {
-	            if (attachedThings == null) return;
-	            foreach (var t in attachedThings)
-	            {
-		            t.Position = parent.Position;
-	            }
+                return;
             }
-		}
 
-        public override void PostDeSpawn(Map map)
-		{
-			base.PostDeSpawn(map);
-			if (attachedThings.Count <= 0)
-			{
-				return;
-			}
-			foreach (var attachedThing in attachedThings.Where(attachedThing => attachedThing.Spawned))
-			{
-				attachedThing.Destroy(DestroyMode.Deconstruct);
-			}
-			attachedThings.Clear();
-		}
-
-		public void AddAttachment(Thing attachment)
-		{
-			attachedThings.Add(attachment);
-		}
-
-		public void RemoveAttachment(Thing attachment)
-        {
-			attachedThings.Remove(attachment);
+            foreach (var thing in attachedThings)
+            {
+                thing.Position = parent.Position;
+            }
         }
-	}
+    }
+
+    public override void PostDeSpawn(Map map)
+    {
+        base.PostDeSpawn(map);
+        if (attachedThings.Count <= 0)
+        {
+            return;
+        }
+
+        foreach (var attachedThing in attachedThings)
+        {
+            if (attachedThing.Spawned)
+            {
+                attachedThing.Destroy(DestroyMode.Deconstruct);
+            }
+        }
+
+        attachedThings.Clear();
+    }
+
+    public void AddAttachment(Thing attachment)
+    {
+        attachedThings.Add(attachment);
+    }
+
+    public void RemoveAttachment(Thing attachment)
+    {
+        attachedThings.Remove(attachment);
+    }
 }

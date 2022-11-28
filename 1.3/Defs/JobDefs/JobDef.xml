@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <JobDef>
     <defName>Deco_HangingWallDecoration</defName>
     <driverClass>ColonistsDeco.JobDriver_HangingWallDecoration</driverClass>
@@ -8,11 +7,10 @@
     <joyDuration>4000</joyDuration>
     <joySkill>Construction</joySkill>
     <joyXpPerTick>0.003</joyXpPerTick>
-		<joyMaxParticipants>1</joyMaxParticipants>
-		<joyGainRate>1</joyGainRate>
+    <joyMaxParticipants>1</joyMaxParticipants>
+    <joyGainRate>1</joyGainRate>
     <joyKind>Deco_Decorating</joyKind>
   </JobDef>
-
   <JobDef>
     <defName>Deco_DecoratingBedsideTable</defName>
     <driverClass>ColonistsDeco.JobDriver_DecoratingBedsideTable</driverClass>
@@ -20,11 +18,10 @@
     <joyDuration>4000</joyDuration>
     <joySkill>Construction</joySkill>
     <joyXpPerTick>0.003</joyXpPerTick>
-		<joyMaxParticipants>1</joyMaxParticipants>
-		<joyGainRate>1</joyGainRate>
+    <joyMaxParticipants>1</joyMaxParticipants>
+    <joyGainRate>1</joyGainRate>
     <joyKind>Deco_Decorating</joyKind>
   </JobDef>
-
   <JobDef>
     <defName>Deco_HangingCeilingDecoration</defName>
     <driverClass>ColonistsDeco.JobDriver_HangingCeilingDecoration</driverClass>
@@ -32,9 +29,8 @@
     <joyDuration>4000</joyDuration>
     <joySkill>Construction</joySkill>
     <joyXpPerTick>0.003</joyXpPerTick>
-		<joyMaxParticipants>1</joyMaxParticipants>
-		<joyGainRate>1</joyGainRate>
+    <joyMaxParticipants>1</joyMaxParticipants>
+    <joyGainRate>1</joyGainRate>
     <joyKind>Deco_Decorating</joyKind>
   </JobDef>
-
 </Defs>

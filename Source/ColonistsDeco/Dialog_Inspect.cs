@@ -1,74 +1,74 @@
 ﻿using UnityEngine;
 using Verse;
 
-namespace ColonistsDeco
+namespace ColonistsDeco;
+
+public class Dialog_Inspect : Window
 {
-	public class Dialog_Inspect : Window
-	{
-		private readonly TaggedString _text;
+    private const float TitleHeight = 42f;
 
-		private readonly Texture2D _image;
+    private const float DialogWidth = 500f;
 
-		private readonly string _title;
+    private const float DialogHeight = 600f;
 
-		private Vector2 _scrollPosition = Vector2.zero;
+    public Texture2D image;
 
-		private const float TitleHeight = 42f;
+    private Vector2 scrollPosition = Vector2.zero;
+    public TaggedString text;
 
-		private const float DialogWidth = 500f;
+    public string title;
 
-		private const float DialogHeight = 600f;
+    public Dialog_Inspect(string text, Texture2D image, string title = null)
+    {
+        this.text = text;
+        this.image = image;
+        this.title = title;
+        if (text.NullOrEmpty())
+        {
+            this.text = "Null";
+        }
 
-		public override Vector2 InitialSize
-		{
-			get
-			{
-				float num = DialogHeight;
-				if (_title != null)
-				{
-					num += TitleHeight;
-				}
-				return new Vector2(DialogWidth, num);
-			}
-		}
+        forcePause = false;
+        draggable = true;
+        resizeable = true;
+        preventCameraMotion = false;
+        absorbInputAroundWindow = false;
+        doCloseX = true;
+        closeOnClickedOutside = true;
+    }
 
-		public Dialog_Inspect(string text, Texture2D image, string title = null)
-		{
-			_text = text;
-			_image = image;
-			_title = title;
-			if (text.NullOrEmpty())
-			{
-				_text = "Null";
-			}
-			forcePause = false;
-			draggable = true;
-			resizeable = true;
-			preventCameraMotion = false;
-			absorbInputAroundWindow = false;
-			doCloseX = true;
-			closeOnClickedOutside = true;
-		}
+    public override Vector2 InitialSize
+    {
+        get
+        {
+            var num = DialogHeight;
+            if (title != null)
+            {
+                num += TitleHeight;
+            }
 
-		public override void DoWindowContents(Rect inRect)
-		{
-			float num = inRect.y;
-			if (!_title.NullOrEmpty())
-			{
-				Text.Font = GameFont.Medium;
-				Widgets.Label(new Rect(0f, num, inRect.width, TitleHeight), _title);
-				num += TitleHeight;
-			}
+            return new Vector2(DialogWidth, num);
+        }
+    }
 
-			Text.Font = GameFont.Small;
-			Rect outRect = new Rect(inRect.x, num, inRect.width, inRect.height - 42f - num);
-			float width = outRect.width - 16f;
-			Rect viewRect = new Rect(0f, 0f, width, Text.CalcHeight(_text, width));
-			Widgets.BeginScrollView(outRect, ref _scrollPosition, viewRect);
-			Widgets.Label(new Rect(0f, 0f, viewRect.width, viewRect.height), _text);
-			Widgets.EndScrollView();
+    public override void DoWindowContents(Rect inRect)
+    {
+        var num = inRect.y;
+        if (!title.NullOrEmpty())
+        {
+            Text.Font = GameFont.Medium;
+            Widgets.Label(new Rect(0f, num, inRect.width, TitleHeight), title);
+            num += TitleHeight;
+        }
 
-			Widgets.DrawTextureFitted(outRect, _image, 1f);
-		}
-	}
+        Text.Font = GameFont.Small;
+        var outRect = new Rect(inRect.x, num, inRect.width, inRect.height - 42f - num);
+        var width = outRect.width - 16f;
+        var viewRect = new Rect(0f, 0f, width, Text.CalcHeight(text, width));
+        Widgets.BeginScrollView(outRect, ref scrollPosition, viewRect);
+        Widgets.Label(new Rect(0f, 0f, viewRect.width, viewRect.height), text);
+        Widgets.EndScrollView();
+
+        Widgets.DrawTextureFitted(outRect, image, 1f);
+    }
 }

@@ -2,46 +2,38 @@
 using UnityEngine;
 using Verse;
 
-namespace ColonistsDeco.Buildings
+namespace ColonistsDeco;
+
+internal class WallDeco_Poster : Building
 {
-    class WallDeco_Poster : Building
+    private Texture2D decoImage;
+    private Texture2D inspectIcon;
+
+    public override IEnumerable<Gizmo> GetGizmos()
     {
-		public string inspectStringAddon = "Poster: ";
+        decoImage = (Texture2D)Graphic.MatSouth.mainTexture;
+        inspectIcon = ContentFinder<Texture2D>.Get("Icons/InspectIcon");
 
-		private Texture2D _decoImage;
-		private Texture2D _inspectIcon;
+        if (inspectIcon == null || decoImage == null)
+        {
+            yield return null;
+        }
 
-		public WallDeco_Poster(string inspectStringAddon)
-		{
-			this.inspectStringAddon = inspectStringAddon;
-		}
+        var item = new Command_Action
+        {
+            defaultLabel = "Deco.inspectposter".Translate(),
+            defaultDesc = "Deco.inspectposterinfo".Translate(),
+            icon = inspectIcon,
+            action = openInspectWindow
+        };
 
-		public override IEnumerable<Gizmo> GetGizmos()
-		{
-			_decoImage = (Texture2D)Graphic.MatSouth.mainTexture;
-			_inspectIcon = ContentFinder<Texture2D>.Get("Icons/InspectIcon");
+        yield return item;
+    }
 
-			if (_inspectIcon == null || _decoImage == null)
-			{
-				yield return null;
-			}
-
-			var item = new Command_Action
-			{
-				defaultLabel = "Inspect Poster",
-				defaultDesc = "Take a closer look at the poster that one of your colonists hung up",
-				icon = _inspectIcon,
-				action = OpenInspectWindow
-			};
-
-			yield return item;
-		}
-
-		private void OpenInspectWindow()
-		{
-			var decorationName = this.TryGetComp<CompDecoration>().decorationName;
-			var decorationCreator = this.TryGetComp<CompDecoration>().decorationCreator;
-			Find.WindowStack.Add(new Dialog_Inspect("\"" + decorationName + "\", " + "hung up by: " + decorationCreator, _decoImage));
-		}
-	}
+    private void openInspectWindow()
+    {
+        var decorationName = this.TryGetComp<CompDecoration>().decorationName;
+        var decorationCreator = this.TryGetComp<CompDecoration>().decorationCreator;
+        Find.WindowStack.Add(new Dialog_Inspect("Deco.hungby".Translate(decorationName, decorationCreator), decoImage));
+    }
 }
