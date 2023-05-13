@@ -23,6 +23,11 @@ public static class HarmonyPatches
         var cells = GenAdjFast.AdjacentCellsCardinal(c);
         foreach (var cell in cells)
         {
+            if (!cell.InBounds(map))
+            {
+                continue;
+            }
+
             foreach (var thing in cell.GetThingList(map))
             {
                 if (Utility.wallDecoDefs.Contains(thing.def) && thing.Position + thing.Rotation.FacingCell == c)

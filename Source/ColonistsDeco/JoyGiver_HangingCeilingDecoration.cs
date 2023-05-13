@@ -20,8 +20,14 @@ internal class JoyGiver_HangingCeilingDecoration : JoyGiver
         }
 
         pawn.TryGetComp<CompPawnDeco>().ResetDecoCooldown();
+        var pawnRoom = pawn.ownership.OwnedBed.GetRoom();
 
-        var tempCeilingLocations = pawn.ownership.OwnedBed.GetRoom().Cells;
+        if (pawnRoom == null || pawnRoom.PsychologicallyOutdoors)
+        {
+            return null;
+        }
+
+        var tempCeilingLocations = pawnRoom.Cells;
         IList<IntVec3> ceilingLocations = new List<IntVec3>();
 
         foreach (var tempCeilingLocation in tempCeilingLocations)
@@ -43,7 +49,7 @@ internal class JoyGiver_HangingCeilingDecoration : JoyGiver
             return null;
         }
 
-        IList<Thing> thingsInRoom = pawn.ownership.OwnedBed.GetRoom().ContainedAndAdjacentThings;
+        IList<Thing> thingsInRoom = pawnRoom.ContainedAndAdjacentThings;
 
         var ceilingDecorationAmount = 0;
 

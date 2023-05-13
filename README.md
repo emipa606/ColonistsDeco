@@ -43,10 +43,6 @@ Feel free to contact me if you have any problems with the mod.
 
 Current version - [V2.4.0]
 
-https://github.com/IemandDieAbeHeet/ColonistsDeco]GitHub Repository
-https://www.patreon.com/IemandDieAbeHeet]Become a Patron!
-https://discord.gg/SJvMexaqT6]Join the Discord server!
-
 ![Image](https://i.imgur.com/p7Fv1Z6.gif)
 
 	
@@ -62,3 +58,4 @@ https://discord.gg/SJvMexaqT6]Join the Discord server!
 -  If you have the solution for a problem, please post it to the GitHub repository.
 
 
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2894674825]Last updated 2023-05-13

@@ -17,8 +17,14 @@ internal class JoyGiver_DecoratingBedsideTable : JoyGiver
             return null;
         }
 
-        IList<Thing> bedsideTables = pawn.ownership.OwnedBed.GetRoom()
-            .ContainedThings(DefDatabase<ThingDef>.GetNamed("EndTable")).ToList();
+        var pawnRoom = pawn.ownership.OwnedBed.GetRoom();
+
+        if (pawnRoom == null || pawnRoom.PsychologicallyOutdoors)
+        {
+            return null;
+        }
+
+        IList<Thing> bedsideTables = pawnRoom.ContainedThings(DefDatabase<ThingDef>.GetNamed("EndTable")).ToList();
 
         for (var i = bedsideTables.Count - 1; i >= 0; i--)
         {

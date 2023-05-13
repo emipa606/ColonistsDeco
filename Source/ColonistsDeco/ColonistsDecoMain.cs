@@ -13,8 +13,7 @@ internal class ColonistsDecoMain : Mod
         : base(content)
     {
         Settings = GetSettings<ColonistsDecoModSettings>();
-        currentVersion =
-            VersionFromManifest.GetVersionFromModMetaData(ModLister.GetActiveModWithIdentifier("Mlie.ColonistsDeco"));
+        currentVersion = VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 
     public override void DoSettingsWindowContents(Rect inRect)

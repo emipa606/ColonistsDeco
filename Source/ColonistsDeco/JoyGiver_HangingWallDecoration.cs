@@ -23,7 +23,14 @@ internal class JoyGiver_HangingWallDecoration : JoyGiver
 
         pawn.TryGetComp<CompPawnDeco>().ResetDecoCooldown();
 
-        IList<IntVec3> wallLocations = pawn.ownership.OwnedBed.GetRoom().BorderCells.ToList();
+        var pawnRoom = pawn.ownership.OwnedBed.GetRoom();
+
+        if (pawnRoom == null || pawnRoom.PsychologicallyOutdoors)
+        {
+            return null;
+        }
+
+        IList<IntVec3> wallLocations = pawnRoom.BorderCells.ToList();
 
         IList<Thing> wallThingList = new List<Thing>();
 
@@ -44,7 +51,7 @@ internal class JoyGiver_HangingWallDecoration : JoyGiver
             }
         }
 
-        IList<Thing> thingsInRoom = pawn.ownership.OwnedBed.GetRoom().ContainedAndAdjacentThings;
+        IList<Thing> thingsInRoom = pawnRoom.ContainedAndAdjacentThings;
 
         var wallDecoAmount = 0;
 
@@ -63,7 +70,7 @@ internal class JoyGiver_HangingWallDecoration : JoyGiver
         {
             var intVec = wall.Position + GenAdj.CardinalDirections[i];
             var region = (wall.Position + GenAdj.CardinalDirections[i]).GetRegion(pawnMap);
-            if (region != null && region.Room == pawn.ownership.OwnedBed.GetRoom())
+            if (region != null && region.Room == pawnRoom)
             {
                 randomPlacePos = intVec;
             }
