@@ -24,7 +24,7 @@ internal class JoyGiver_DecoratingBedsideTable : JoyGiver
             return null;
         }
 
-        IList<Thing> bedsideTables = pawnRoom.ContainedThings(DefDatabase<ThingDef>.GetNamed("EndTable")).ToList();
+        IList<Thing> bedsideTables = pawnRoom.ContainedThingsList(Utility.bedsideTables).ToList();
 
         for (var i = bedsideTables.Count - 1; i >= 0; i--)
         {

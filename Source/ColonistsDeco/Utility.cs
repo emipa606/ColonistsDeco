@@ -33,63 +33,80 @@ internal class Utility
 
     public static List<ResearchProjectDef> researchProjectDefs = new List<ResearchProjectDef>();
 
+    public static List<ThingDef> bedsideTables = new List<ThingDef>();
+
     public static void LoadDefs()
     {
         var attachableThingComp = new CompProperties_AttachableThing();
         var pawnDecoThingComp = new CompProperties_PawnDeco();
 
-        foreach (var allDef in DefDatabase<ThingDef>.AllDefs)
-        {
-            if (allDef.HasModExtension<DecoModExtension>())
-            {
-                thingTechProgression.Add(allDef, allDef.GetModExtension<DecoModExtension>().decoTechLevels);
-                decoDictionary.Add(allDef,
-                    (allDef.GetModExtension<DecoModExtension>().decoTechLevels,
-                        allDef.GetModExtension<DecoModExtension>().decoLocationType));
 
-                switch (allDef.GetModExtension<DecoModExtension>().decoLocationType)
+        foreach (var currentDef in DefDatabase<ThingDef>.AllDefs)
+        {
+            if (currentDef.HasModExtension<DecoModExtension>())
+            {
+                thingTechProgression.Add(currentDef, currentDef.GetModExtension<DecoModExtension>().decoTechLevels);
+                decoDictionary.Add(currentDef,
+                    (currentDef.GetModExtension<DecoModExtension>().decoTechLevels,
+                        currentDef.GetModExtension<DecoModExtension>().decoLocationType));
+
+                switch (currentDef.GetModExtension<DecoModExtension>().decoLocationType)
                 {
                     case DecoLocationType.Wall:
-                        wallDecoDefs.Add(allDef);
-                        wallDecoHashes.Add(allDef.GetHashCode());
+                        wallDecoDefs.Add(currentDef);
+                        wallDecoHashes.Add(currentDef.GetHashCode());
 
-                        if (allDef.defName == "DECOPosterTorn")
+                        if (currentDef.defName == "DECOPosterTorn")
                         {
-                            tornDef = allDef;
+                            tornDef = currentDef;
                         }
 
                         break;
                     case DecoLocationType.Bedside:
-                        bedsideDecoDefs.Add(allDef);
-                        bedsideDecoHashes.Add(allDef.GetHashCode());
+                        bedsideDecoDefs.Add(currentDef);
+                        bedsideDecoHashes.Add(currentDef.GetHashCode());
                         break;
                     case DecoLocationType.Ceiling:
-                        ceilingDecoDefs.Add(allDef);
-                        ceilingDecoHashes.Add(allDef.GetHashCode());
+                        ceilingDecoDefs.Add(currentDef);
+                        ceilingDecoHashes.Add(currentDef.GetHashCode());
                         break;
                 }
             }
 
-            switch (allDef.defName)
+            switch (currentDef.defName)
             {
                 case "Wall":
-                    wallDef = allDef;
-                    allDef.comps.Add(attachableThingComp);
-                    wallHashes.Add(allDef.GetHashCode());
+                    wallDef = currentDef;
+                    currentDef.comps.Add(attachableThingComp);
+                    wallHashes.Add(currentDef.GetHashCode());
                     break;
                 case var val when new Regex("(Smoothed)+").IsMatch(val):
-                    wallDef = allDef;
-                    allDef.comps.Add(attachableThingComp);
-                    wallHashes.Add(allDef.GetHashCode());
+                    wallDef = currentDef;
+                    currentDef.comps.Add(attachableThingComp);
+                    wallHashes.Add(currentDef.GetHashCode());
                     break;
                 case "EndTable":
-                    allDef.comps.Add(attachableThingComp);
+                    currentDef.comps.Add(attachableThingComp);
+                    bedsideTables.Add(currentDef);
                     break;
                 case "Human":
-                    allDef.comps.Add(pawnDecoThingComp);
+                    currentDef.comps.Add(pawnDecoThingComp);
+                    break;
+                default:
+                    var comp = currentDef.GetCompProperties<CompProperties_Facility>();
+                    if (comp is { mustBePlacedAdjacentCardinalToBedHead: true } &&
+                        currentDef.label.ToLower().Contains("table") && !currentDef.label.ToLower().Contains("lamp"))
+                    {
+                        bedsideTables.Add(currentDef);
+                        currentDef.comps.Add(attachableThingComp);
+                    }
+
                     break;
             }
         }
+
+        Log.Message(
+            $"[ColonistsDeco]: Found {bedsideTables.Count} types of bedside tables: {string.Join(", ", bedsideTables)}");
 
         foreach (var researchDef in DefDatabase<ResearchProjectDef>.AllDefs)
         {
