@@ -1,5 +1,8 @@
 # Changelog for ColonistsDeco
 
+1.4.4 - Ascetic pawns will not decorate their room. Decorators name will now be saved correctly
+
+
 1.4.3 - Should support more end-tables, as long as they already have a lamp on them
 
 

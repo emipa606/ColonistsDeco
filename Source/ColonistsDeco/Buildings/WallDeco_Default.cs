@@ -32,8 +32,13 @@ internal class WallDeco_Default : Building
 
     private void openInspectWindow()
     {
-        var decorationName = this.TryGetComp<CompDecoration>().decorationName;
-        var decorationCreator = this.TryGetComp<CompDecoration>().decorationCreator;
+        var decorationName = this.TryGetComp<CompDecoration>().Props.decorationName;
+        var decorationCreator = this.TryGetComp<CompDecoration>().Props.decoratorCreator;
+        if (string.IsNullOrEmpty(decorationCreator))
+        {
+            decorationCreator = "Unknown".Translate();
+        }
+
         Find.WindowStack.Add(new Dialog_Inspect("Deco.hungby".Translate(decorationName, decorationCreator), decoImage));
     }
 }

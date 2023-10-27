@@ -12,7 +12,9 @@ internal class JoyGiver_DecoratingBedsideTable : JoyGiver
     {
         var pawnMap = pawn.Map;
 
-        if (pawn.WorkTypeIsDisabled(WorkTypeDefOf.Construction) || pawn.IsPrisoner || pawn.ownership.OwnedBed == null)
+        if (pawn.WorkTypeIsDisabled(WorkTypeDefOf.Construction) || pawn.IsPrisoner || pawn.IsSlave ||
+            pawn.IsColonyMech || pawn.ownership.OwnedBed == null ||
+            pawn.story?.traits?.HasTrait(TraitDefOf.Ascetic) == true)
         {
             return null;
         }

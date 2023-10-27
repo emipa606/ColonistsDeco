@@ -5,6 +5,8 @@
 Update of Abe Vrienss mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2558083020
 
+- Should support more end-tables, as long as they dont already have a lamp on them
+
 ![Image](https://i.imgur.com/pufA0kM.png)
 
 	
@@ -42,9 +44,6 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=867467808&amp;searchtext=
 Feel free to contact me if you have any problems with the mod.
 
 Current version - [V2.4.0]
-
-![Image](https://i.imgur.com/p7Fv1Z6.gif)
-
 	
 ![Image](https://i.imgur.com/PwoNOj4.png)
 

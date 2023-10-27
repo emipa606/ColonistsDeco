@@ -59,7 +59,7 @@ internal class JobDriver_HangingCeilingDecoration : JobDriver
                 var compDecoration = thing.TryGetComp<CompDecoration>();
                 if (compDecoration != null)
                 {
-                    compDecoration.decorationCreator = pawn.Name.ToStringShort;
+                    compDecoration.Props.decoratorCreator = pawn.Name.ToStringShort;
                 }
 
                 GenSpawn.Spawn(thing, placeInfo.Cell, Map, Rot4.North);

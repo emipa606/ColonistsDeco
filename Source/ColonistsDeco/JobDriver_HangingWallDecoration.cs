@@ -66,7 +66,7 @@ public class JobDriver_HangingWallDecoration : JobDriver
                 var compDecoration = thing.TryGetComp<CompDecoration>();
                 if (compDecoration != null)
                 {
-                    compDecoration.decorationCreator = pawn.Name.ToStringShort;
+                    compDecoration.Props.decoratorCreator = pawn.Name.ToStringShort;
                 }
 
                 wallInfo.Thing.TryGetComp<CompAttachableThing>().AddAttachment(thing);
