@@ -1,5 +1,8 @@
 # Changelog for ColonistsDeco
 
+1.4.5 - Fixed the issue with the missing creator of decorations, also error when a room only have non-hangable walls
+
+
 1.4.4 - Ascetic pawns will not decorate their room. Decorators name will now be saved correctly
 
 

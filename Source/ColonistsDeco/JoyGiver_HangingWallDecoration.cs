@@ -51,6 +51,11 @@ internal class JoyGiver_HangingWallDecoration : JoyGiver
             }
         }
 
+        if (!wallThingList.Any())
+        {
+            return null;
+        }
+
         IList<Thing> thingsInRoom = pawnRoom.ContainedAndAdjacentThings;
 
         var wallDecoAmount = 0;

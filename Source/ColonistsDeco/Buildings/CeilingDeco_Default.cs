@@ -33,7 +33,7 @@ internal class CeilingDeco_Default : Building
     private void openInspectWindow()
     {
         var decorationName = this.TryGetComp<CompDecoration>().Props.decorationName;
-        var decorationCreator = this.TryGetComp<CompDecoration>().Props.decoratorCreator;
+        var decorationCreator = this.TryGetComp<CompDecoration>().decoratorCreator;
         if (string.IsNullOrEmpty(decorationCreator))
         {
             decorationCreator = "Unknown".Translate();
