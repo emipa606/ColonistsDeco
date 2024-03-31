@@ -5,7 +5,7 @@ namespace ColonistsDeco;
 
 internal class CompAttachableThing : ThingComp
 {
-    public List<Thing> attachedThings = new List<Thing>();
+    public readonly List<Thing> attachedThings = [];
 
     public override void CompTick()
     {

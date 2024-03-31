@@ -11,29 +11,29 @@ internal class Utility
 
     public static ThingDef tornDef;
 
-    public static Dictionary<ThingDef, List<TechLevel>> thingTechProgression =
+    public static readonly Dictionary<ThingDef, List<TechLevel>> thingTechProgression =
         new Dictionary<ThingDef, List<TechLevel>>();
 
-    public static Dictionary<ThingDef, (List<TechLevel>, DecoLocationType)> decoDictionary =
+    public static readonly Dictionary<ThingDef, (List<TechLevel>, DecoLocationType)> decoDictionary =
         new Dictionary<ThingDef, (List<TechLevel>, DecoLocationType)>();
 
-    public static List<ThingDef> ceilingDecoDefs = new List<ThingDef>();
+    public static readonly List<ThingDef> ceilingDecoDefs = [];
 
-    public static List<ThingDef> wallDecoDefs = new List<ThingDef>();
+    public static readonly List<ThingDef> wallDecoDefs = [];
 
-    public static List<ThingDef> bedsideDecoDefs = new List<ThingDef>();
+    public static readonly List<ThingDef> bedsideDecoDefs = [];
 
-    public static List<int> wallHashes = new List<int>();
+    public static readonly List<int> wallHashes = [];
 
-    public static List<int> ceilingDecoHashes = new List<int>();
+    public static readonly List<int> ceilingDecoHashes = [];
 
-    public static List<int> wallDecoHashes = new List<int>();
+    public static readonly List<int> wallDecoHashes = [];
 
-    public static List<int> bedsideDecoHashes = new List<int>();
+    public static readonly List<int> bedsideDecoHashes = [];
 
-    public static List<ResearchProjectDef> researchProjectDefs = new List<ResearchProjectDef>();
+    public static readonly List<ResearchProjectDef> researchProjectDefs = [];
 
-    public static List<ThingDef> bedsideTables = new List<ThingDef>();
+    public static readonly List<ThingDef> bedsideTables = [];
 
     public static void LoadDefs()
     {

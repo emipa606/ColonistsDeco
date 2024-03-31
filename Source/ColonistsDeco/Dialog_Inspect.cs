@@ -11,12 +11,12 @@ public class Dialog_Inspect : Window
 
     private const float DialogHeight = 600f;
 
-    public Texture2D image;
+    public readonly Texture2D image;
+
+    public readonly string title;
 
     private Vector2 scrollPosition = Vector2.zero;
     public TaggedString text;
-
-    public string title;
 
     public Dialog_Inspect(string text, Texture2D image, string title = null)
     {

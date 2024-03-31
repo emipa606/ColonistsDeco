@@ -1,5 +1,8 @@
 # Changelog for ColonistsDeco
 
+1.5.0 - Mod updated for 1.5 and passed autotests
+
+
 1.4.5 - Fixed the issue with the missing creator of decorations, also error when a room only have non-hangable walls
 
 

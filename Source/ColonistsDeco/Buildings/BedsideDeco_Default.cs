@@ -36,7 +36,7 @@ internal class BedsideDeco_Default : Building
         Graphic.TryGetTextureAtlasReplacementInfo(material, def.category.ToAtlasGroup(), flipped, true, out material,
             out var uvs, out var vertexColor);
         Printer_Plane.PrintPlane(layer, center, size, material, 0f, flipped, uvs,
-            new[] { vertexColor, vertexColor, vertexColor, vertexColor });
+            [vertexColor, vertexColor, vertexColor, vertexColor]);
         Graphic.ShadowGraphic?.Print(layer, this, 0f);
     }
 

@@ -6,6 +6,6 @@ namespace ColonistsDeco;
 
 internal class DecoModExtension : DefModExtension
 {
+    public readonly List<TechLevel> decoTechLevels = [];
     public DecoLocationType decoLocationType;
-    public List<TechLevel> decoTechLevels = new List<TechLevel>();
 }
