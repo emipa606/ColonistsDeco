@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Colonists' Deco (Continued)</name>
+  <name>[Legacy] Colonists' Deco (Continued)</name>
   <packageId>Mlie.ColonistsDeco</packageId>
   <author>Abe Vriens</author>
   <url>https://github.com/emipa606/ColonistsDeco</url>
@@ -25,6 +25,10 @@
 Update of Abe Vrienss mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2558083020
 
+[b]The release of RimWorld 1.6 added improved support for [url=https://github.com/emipa606/AssetBuilder/blob/main/README.md]Asset Bundles[/url].[/b]
+To avoid doubling the size of the mod, it was re-released using only Asset Bundles, you can find the new version of this mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3511154027]here[/url].
+This version will not receive any further updates.
+
 - Should support more end-tables, as long as they dont already have a lamp on them
 
 [img]https://i.imgur.com/pufA0kM.png[/img]
@@ -32,7 +36,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2558083020
 [table]
     [tr]
         [td][url=https://dsc.gg/mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
-        [td][url=https://github.com/emipa606/ColonistsDeco][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+        [td][url=https://github.com/emipa606/ColonistsDeco/tree/legacy][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
     [/tr]
     [tr]
         [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
@@ -77,8 +81,8 @@ Current version - [V2.4.0]
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
 [*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
-[/list]
+[/list] 
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2894674825][img]https://img.shields.io/github/v/release/emipa606/ColonistsDeco?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url]</description>
-  <modVersion IgnoreIfNoMatchingField="True">1.5.0</modVersion>
+  <modVersion IgnoreIfNoMatchingField="True">1.5.1</modVersion>
 </ModMetaData>
