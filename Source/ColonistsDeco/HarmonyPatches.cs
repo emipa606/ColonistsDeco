@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -8,17 +8,16 @@ namespace ColonistsDeco;
 [StaticConstructorOnStartup]
 public static class HarmonyPatches
 {
-    private static readonly Type patchType = typeof(HarmonyPatches);
-
     static HarmonyPatches()
     {
-        var harmony = new Harmony("rimworld.iemanddieabeheet.colonistsdeco");
-
-        harmony.Patch(AccessTools.Method(typeof(BeautyUtility), nameof(BeautyUtility.CellBeauty)),
-            postfix: new HarmonyMethod(patchType, nameof(CellBeautyPostfix)));
+        new Harmony("rimworld.iemanddieabeheet.colonistsdeco").PatchAll(Assembly.GetExecutingAssembly());
     }
+}
 
-    public static void CellBeautyPostfix(ref float __result, IntVec3 c, Map map)
+[HarmonyPatch(typeof(BeautyUtility), nameof(BeautyUtility.CellBeauty))]
+public static class BeautyUtility_CellBeauty
+{
+    public static void Postfix(ref float __result, IntVec3 c, Map map)
     {
         var cells = GenAdjFast.AdjacentCellsCardinal(c);
         foreach (var cell in cells)

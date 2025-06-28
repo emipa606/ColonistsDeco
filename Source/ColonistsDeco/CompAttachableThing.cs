@@ -5,7 +5,7 @@ namespace ColonistsDeco;
 
 internal class CompAttachableThing : ThingComp
 {
-    public readonly List<Thing> attachedThings = [];
+    private readonly List<Thing> attachedThings = [];
 
     public override void CompTick()
     {
@@ -23,9 +23,9 @@ internal class CompAttachableThing : ThingComp
         }
     }
 
-    public override void PostDeSpawn(Map map)
+    public override void PostDeSpawn(Map map, DestroyMode mode = DestroyMode.Vanish)
     {
-        base.PostDeSpawn(map);
+        base.PostDeSpawn(map, mode);
         if (attachedThings.Count <= 0)
         {
             return;
@@ -45,10 +45,5 @@ internal class CompAttachableThing : ThingComp
     public void AddAttachment(Thing attachment)
     {
         attachedThings.Add(attachment);
-    }
-
-    public void RemoveAttachment(Thing attachment)
-    {
-        attachedThings.Remove(attachment);
     }
 }

@@ -30,8 +30,8 @@ internal class JoyGiver_DecoratingBedsideTable : JoyGiver
 
         for (var i = bedsideTables.Count - 1; i >= 0; i--)
         {
-            IList<Thing> ThingList = bedsideTables[i].Position.GetThingList(pawnMap);
-            if (ThingList.Any(Utility.IsBedsideDeco))
+            IList<Thing> thingList = bedsideTables[i].Position.GetThingList(pawnMap);
+            if (thingList.Any(Utility.IsBedsideDeco))
             {
                 bedsideTables.RemoveAt(i);
             }

@@ -7,14 +7,14 @@ namespace ColonistsDeco;
 
 public class JobDriver_HangingWallDecoration : JobDriver
 {
-    protected const int BaseWorkAmount = 100;
+    private const int BaseWorkAmount = 100;
     private float workLeft = 100f;
-    protected LocalTargetInfo placeInfo => job.GetTarget(TargetIndex.A);
-    protected LocalTargetInfo wallInfo => job.GetTarget(TargetIndex.B);
+    private LocalTargetInfo PlaceInfo => job.GetTarget(TargetIndex.A);
+    private LocalTargetInfo WallInfo => job.GetTarget(TargetIndex.B);
 
     public override bool TryMakePreToilReservations(bool errorOnFailed)
     {
-        return pawn.Reserve(placeInfo, job, 1, -1, null, errorOnFailed);
+        return pawn.Reserve(PlaceInfo, job, 1, -1, null, errorOnFailed);
     }
 
     protected override IEnumerable<Toil> MakeNewToils()
@@ -69,8 +69,8 @@ public class JobDriver_HangingWallDecoration : JobDriver
                     compDecoration.decoratorCreator = pawn.Name.ToStringShort;
                 }
 
-                wallInfo.Thing.TryGetComp<CompAttachableThing>().AddAttachment(thing);
-                GenSpawn.Spawn(thing, wallInfo.Cell, Map, pawn.Rotation.Opposite);
+                WallInfo.Thing.TryGetComp<CompAttachableThing>().AddAttachment(thing);
+                GenSpawn.Spawn(thing, WallInfo.Cell, Map, pawn.Rotation.Opposite);
                 ReadyForNextToil();
             },
             defaultCompleteMode = ToilCompleteMode.Never

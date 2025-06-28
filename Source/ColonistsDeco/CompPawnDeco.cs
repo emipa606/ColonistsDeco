@@ -24,11 +24,6 @@ internal class CompPawnDeco : ThingComp
         }
     }
 
-    public void RemoveDecoCooldown()
-    {
-        decoCooldown = 0;
-    }
-
     public override void CompTick()
     {
         base.CompTick();

@@ -7,13 +7,13 @@ namespace ColonistsDeco;
 internal class ColonistsDecoMain : Mod
 {
     public static ColonistsDecoModSettings Settings;
-    public static string currentVersion;
+    public static string CurrentVersion;
 
     public ColonistsDecoMain(ModContentPack content)
         : base(content)
     {
         Settings = GetSettings<ColonistsDecoModSettings>();
-        currentVersion = VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
+        CurrentVersion = VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 
     public override void DoSettingsWindowContents(Rect inRect)

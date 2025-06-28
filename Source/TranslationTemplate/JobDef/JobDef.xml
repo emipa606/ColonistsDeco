@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Placing something on their bedside table. -->
+  <Deco_DecoratingBedsideTable.reportString>Placing something on their bedside table.</Deco_DecoratingBedsideTable.reportString>
+  <!-- EN: Hanging something on the ceiling. -->
+  <Deco_HangingCeilingDecoration.reportString>Hanging something on the ceiling.</Deco_HangingCeilingDecoration.reportString>
+  <!-- EN: Hanging something on the wall. -->
+  <Deco_HangingWallDecoration.reportString>Hanging something on the wall.</Deco_HangingWallDecoration.reportString>
+</LanguageData>

@@ -10,12 +10,12 @@ internal static class ColonistsDecoModSettingsUtil
         float roundTo = -1f)
     {
         float value2 = value;
-        var gapHeight = HorizontalSlider(list.GetRect(22f), ref value2, min, max, label?.Invoke(), roundTo);
+        var gapHeight = horizontalSlider(list.GetRect(22f), ref value2, min, max, label?.Invoke(), roundTo);
         value = (int)value2;
         list.Gap(gapHeight);
     }
 
-    public static float HorizontalSlider(Rect rect, ref float value, float leftValue, float rightValue,
+    private static float horizontalSlider(Rect rect, ref float value, float leftValue, float rightValue,
         string label = null, float roundTo = -1f)
     {
         if (label != null)

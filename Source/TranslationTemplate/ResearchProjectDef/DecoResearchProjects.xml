@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Industrial decorations -->
+  <IndustrialDecorations.label>Industrial decorations</IndustrialDecorations.label>
+  <!-- EN: Unlock the industrial decorations. -->
+  <IndustrialDecorations.description>Unlock the industrial decorations.</IndustrialDecorations.description>
+  <!-- EN: Spacer decorations -->
+  <SpacerDecorations.label>Spacer decorations</SpacerDecorations.label>
+  <!-- EN: Unlock the spacer decorations. -->
+  <SpacerDecorations.description>Unlock the spacer decorations.</SpacerDecorations.description>
+</LanguageData>

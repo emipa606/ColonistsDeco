@@ -7,13 +7,13 @@ namespace ColonistsDeco;
 
 public class JobDriver_DecoratingBedsideTable : JobDriver
 {
-    protected const int BaseWorkAmount = 100;
+    private const int BaseWorkAmount = 100;
     private float workLeft = 100f;
-    protected LocalTargetInfo bedsideInfo => job.GetTarget(TargetIndex.A);
+    private LocalTargetInfo BedsideInfo => job.GetTarget(TargetIndex.A);
 
     public override bool TryMakePreToilReservations(bool errorOnFailed)
     {
-        return pawn.Reserve(bedsideInfo, job);
+        return pawn.Reserve(BedsideInfo, job);
     }
 
     protected override IEnumerable<Toil> MakeNewToils()
@@ -43,8 +43,8 @@ public class JobDriver_DecoratingBedsideTable : JobDriver
 
                 var thing = ThingMaker.MakeThing(Utility.bedsideDecoDefs.RandomElement());
                 thing.SetFactionDirect(pawn.Faction);
-                bedsideInfo.Thing.TryGetComp<CompAttachableThing>().AddAttachment(thing);
-                GenSpawn.Spawn(thing, bedsideInfo.Cell, Map, bedsideInfo.Thing.Rotation);
+                BedsideInfo.Thing.TryGetComp<CompAttachableThing>().AddAttachment(thing);
+                GenSpawn.Spawn(thing, BedsideInfo.Cell, Map, BedsideInfo.Thing.Rotation);
                 ReadyForNextToil();
             },
             defaultCompleteMode = ToilCompleteMode.Never

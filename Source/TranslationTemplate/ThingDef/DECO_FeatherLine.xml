@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: decorative feather line -->
+  <DECOFeatherLine.label>decorative feather line</DECOFeatherLine.label>
+  <!-- EN: Feathers hanging from some string. Hung up by one of your colonists. -->
+  <DECOFeatherLine.description>Feathers hanging from some string. Hung up by one of your colonists.</DECOFeatherLine.description>
+  <!-- EN: Feather line -->
+  <DECOFeatherLine.comps.CompDecoration.decorationName>Feather line</DECOFeatherLine.comps.CompDecoration.decorationName>
+</LanguageData>

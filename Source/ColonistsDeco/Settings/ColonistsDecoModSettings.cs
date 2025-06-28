@@ -22,53 +22,53 @@ internal class ColonistsDecoModSettings : ModSettings
 
     public void DoWindowContents(Rect canvas)
     {
-        var listing_Standard = new Listing_Standard
+        var listingStandard = new Listing_Standard
         {
             ColumnWidth = canvas.width
         };
-        listing_Standard.Begin(canvas);
-        listing_Standard.Slider(ref wallDecorationLimit, 1, 25, () => "Deco.walllimit".Translate(wallDecorationLimit),
+        listingStandard.Begin(canvas);
+        listingStandard.Slider(ref wallDecorationLimit, 1, 25, () => "Deco.walllimit".Translate(wallDecorationLimit),
             1f);
-        listing_Standard.Gap(32f);
-        listing_Standard.Slider(ref ceilingDecorationLimit, 1, 25,
+        listingStandard.Gap(32f);
+        listingStandard.Slider(ref ceilingDecorationLimit, 1, 25,
             () => "Deco.ceilinglimit".Translate(ceilingDecorationLimit), 1f);
-        listing_Standard.Gap(32f);
-        listing_Standard.Slider(ref defaultDecoCooldown, 0, 240000,
+        listingStandard.Gap(32f);
+        listingStandard.Slider(ref defaultDecoCooldown, 0, 240000,
             () => "Deco.cooldown".Translate(defaultDecoCooldown.ToStringTicksToPeriod()), 100f);
         if (Current.ProgramState == ProgramState.Playing)
         {
-            listing_Standard.Gap(32f);
-            if (listing_Standard.ButtonText("Deco.remove".Translate()))
+            listingStandard.Gap(32f);
+            if (listingStandard.ButtonText("Deco.remove".Translate()))
             {
                 Find.WindowStack.Add(
-                    new Dialog_Confirm("Deco.removeconfirm".Translate(), RemoveDecos));
+                    new Dialog_Confirm("Deco.removeconfirm".Translate(), removeDecos));
             }
         }
 
-        listing_Standard.Gap(32f);
-        if (listing_Standard.ButtonText("Deco.reset".Translate()))
+        listingStandard.Gap(32f);
+        if (listingStandard.ButtonText("Deco.reset".Translate()))
         {
-            Find.WindowStack.Add(new Dialog_Confirm("Deco.resetconfirm".Translate(), ResetSettings));
+            Find.WindowStack.Add(new Dialog_Confirm("Deco.resetconfirm".Translate(), resetSettings));
         }
 
-        if (ColonistsDecoMain.currentVersion != null)
+        if (ColonistsDecoMain.CurrentVersion != null)
         {
-            listing_Standard.Gap();
+            listingStandard.Gap();
             GUI.contentColor = Color.gray;
-            listing_Standard.Label("Deco.currentModVersion".Translate(ColonistsDecoMain.currentVersion));
+            listingStandard.Label("Deco.currentModVersion".Translate(ColonistsDecoMain.CurrentVersion));
             GUI.contentColor = Color.white;
         }
 
-        listing_Standard.End();
+        listingStandard.End();
     }
 
-    private void ResetSettings()
+    private void resetSettings()
     {
         wallDecorationLimit = 2;
         defaultDecoCooldown = 60000;
     }
 
-    private void RemoveDecos()
+    private static void removeDecos()
     {
         var allThings = new List<Thing>();
 

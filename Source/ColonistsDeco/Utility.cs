@@ -7,31 +7,25 @@ namespace ColonistsDeco;
 
 internal class Utility
 {
-    public static ThingDef wallDef;
+    private static readonly Dictionary<ThingDef, List<TechLevel>> thingTechProgression = new();
 
-    public static ThingDef tornDef;
+    private static readonly Dictionary<ThingDef, (List<TechLevel>, DecoLocationType)> decoDictionary = new();
 
-    public static readonly Dictionary<ThingDef, List<TechLevel>> thingTechProgression =
-        new Dictionary<ThingDef, List<TechLevel>>();
-
-    public static readonly Dictionary<ThingDef, (List<TechLevel>, DecoLocationType)> decoDictionary =
-        new Dictionary<ThingDef, (List<TechLevel>, DecoLocationType)>();
-
-    public static readonly List<ThingDef> ceilingDecoDefs = [];
+    private static readonly List<ThingDef> ceilingDecoDefs = [];
 
     public static readonly List<ThingDef> wallDecoDefs = [];
 
     public static readonly List<ThingDef> bedsideDecoDefs = [];
 
-    public static readonly List<int> wallHashes = [];
+    private static readonly List<int> wallHashes = [];
 
-    public static readonly List<int> ceilingDecoHashes = [];
+    private static readonly List<int> ceilingDecoHashes = [];
 
-    public static readonly List<int> wallDecoHashes = [];
+    private static readonly List<int> wallDecoHashes = [];
 
-    public static readonly List<int> bedsideDecoHashes = [];
+    private static readonly List<int> bedsideDecoHashes = [];
 
-    public static readonly List<ResearchProjectDef> researchProjectDefs = [];
+    private static readonly List<ResearchProjectDef> researchProjectDefs = [];
 
     public static readonly List<ThingDef> bedsideTables = [];
 
@@ -55,12 +49,6 @@ internal class Utility
                     case DecoLocationType.Wall:
                         wallDecoDefs.Add(currentDef);
                         wallDecoHashes.Add(currentDef.GetHashCode());
-
-                        if (currentDef.defName == "DECOPosterTorn")
-                        {
-                            tornDef = currentDef;
-                        }
-
                         break;
                     case DecoLocationType.Bedside:
                         bedsideDecoDefs.Add(currentDef);
@@ -76,12 +64,7 @@ internal class Utility
             switch (currentDef.defName)
             {
                 case "Wall":
-                    wallDef = currentDef;
-                    currentDef.comps.Add(attachableThingComp);
-                    wallHashes.Add(currentDef.GetHashCode());
-                    break;
                 case var val when new Regex("(Smoothed)+").IsMatch(val):
-                    wallDef = currentDef;
                     currentDef.comps.Add(attachableThingComp);
                     wallHashes.Add(currentDef.GetHashCode());
                     break;
@@ -169,40 +152,5 @@ internal class Utility
         }
 
         return decoList.Count > 0 ? decoList : locationDecoList;
-    }
-
-    public static bool ResearchLevelHasDecos(ResearchProjectDef researchLevel, DecoLocationType decoLocationType)
-    {
-        var count = 0;
-
-        foreach (var deco in decoDictionary.Keys)
-        {
-            if (!decoDictionary.TryGetValue(deco, out var decoTuple))
-            {
-                continue;
-            }
-
-            if (decoTuple.Item1.Any(t => t == researchLevel.techLevel) && decoTuple.Item2 == decoLocationType)
-            {
-                count++;
-            }
-        }
-
-        return count > 0;
-    }
-
-    public static ResearchProjectDef GetHighestResearchedLevel()
-    {
-        var rd = new ResearchProjectDef();
-
-        foreach (var researchProjectDef in researchProjectDefs)
-        {
-            if (researchProjectDef.IsFinished)
-            {
-                rd = researchProjectDef;
-            }
-        }
-
-        return rd;
     }
 }

@@ -1,0 +1,103 @@
+ManifestFileVersion: 0
+CRC: 3258801223
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1c006c4e73b106d4aa23fe0b179ecab9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 1c006c4e73b106d4aa23fe0b179ecab9
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/FeatherLine/FeatherLineE.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterMeteor/Poster_west.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterCat/Poster_east.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/Paperball/PaperballA.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Ornaments/ArchoIntelligenceBoard/ArchoIntelligenceBoard_north.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/Spikeball/SpikeballB.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Bedside/Book/Book_south.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterStar/Poster_east.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterUnity/Poster_west.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Ornaments/Deerhead/Deerhead_east.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterBrain/Poster_west.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/BrassShapes/BrassShapesB.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterElectric/Poster_east.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/Spikeball/SpikeballC.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterAlien/Poster_north.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterElectric/Poster_west.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Ornaments/Boarhead/Boarhead_west.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Bedside/Bottle/BottleA.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterBrain/Poster_north.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterAlien/Poster_south.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterMeteor/Poster_south.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterUnity/Poster_east.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Ornaments/Deerhead/Deerhead_south.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/FeatherLine/FeatherLineB.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/Spikeball/SpikeballA.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterStar/Poster_north.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Bedside/Book/Book_east.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterEarth/Poster_east.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterDogs/Poster_east.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/FeatherLine/FeatherLineF.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterBrain/Poster_south.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Ornaments/ArchoIntelligenceBoard/ArchoIntelligenceBoard_east.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterDogs/Poster_west.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterMeteor/Poster_north.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/Dreamcatcher/DreamcatcherB.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterUnity/Poster_south.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterCat/Poster_west.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Ornaments/Boarhead/Boarhead_north.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterEarth/Poster_south.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterCat/Poster_north.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterStar/Poster_south.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterMeteor/Poster_east.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Ornaments/Boarhead/Boarhead_south.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterEarth/Poster_west.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Ornaments/ArchoIntelligenceBoard/ArchoIntelligenceBoard_south.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/Spikeball/SpikeballD.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterEarth/Poster_north.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterAlien/Poster_west.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterAlien/Poster_east.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/FeatherLine/FeatherLineD.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterUnity/Poster_north.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Ornaments/ArchoIntelligenceBoard/ArchoIntelligenceBoard_west.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterDogs/Poster_south.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterTorn/Poster_east.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/Paperball/PaperballB.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/UI/Icon.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Bedside/Book/Book_north.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterCat/Poster_south.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/Paperball/PaperballD.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterStar/Poster_west.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Icons/InspectPoster.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Bedside/Bottle/BottleC.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterTorn/Poster_north.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterTorn/Poster_west.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/Dreamcatcher/DreamcatcherA.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/FeatherLine/FeatherLineA.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterTorn/Poster_south.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/Paperball/PaperballC.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterElectric/Poster_south.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Bedside/Bottle/BottleB.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterElectric/Poster_north.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterUnity/Original/Poster_south.psd
+- Assets/Data/Mlie.ColonistsDeco/Textures/Icons/InspectIcon.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/FeatherLine/FeatherLineC.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Ornaments/Deerhead/Deerhead_north.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/ArchoIntelligenceBall/ArchoIntelligenceBall.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/BrassShapes/BrassShapesA.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Bedside/Book/Book_west.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Ornaments/Boarhead/Boarhead_east.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/BrassShapes/BrassShapesC.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Ceiling/Dreamcatcher/DreamcatcherC.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterBrain/Poster_east.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Posters/PosterDogs/Poster_north.png
+- Assets/Data/Mlie.ColonistsDeco/Textures/Bedroom/Wall/Ornaments/Deerhead/Deerhead_west.png
+Dependencies: []

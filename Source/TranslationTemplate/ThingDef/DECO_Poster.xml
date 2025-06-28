@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: decorative poster -->
+  <DECOPosterAlien.label>decorative poster</DECOPosterAlien.label>
+  <!-- EN: A decorative poster. Hung up by one of your colonists. -->
+  <DECOPosterAlien.description>A decorative poster. Hung up by one of your colonists.</DECOPosterAlien.description>
+  <!-- EN: Outer Space -->
+  <DECOPosterAlien.comps.CompDecoration.decorationName>Outer Space</DECOPosterAlien.comps.CompDecoration.decorationName>
+  <!-- EN: decorative poster -->
+  <DECOPosterBrain.label>decorative poster</DECOPosterBrain.label>
+  <!-- EN: A decorative poster. Hung up by one of your colonists. -->
+  <DECOPosterBrain.description>A decorative poster. Hung up by one of your colonists.</DECOPosterBrain.description>
+  <!-- EN: The Experiment -->
+  <DECOPosterBrain.comps.CompDecoration.decorationName>The Experiment</DECOPosterBrain.comps.CompDecoration.decorationName>
+  <!-- EN: decorative poster -->
+  <DECOPosterCat.label>decorative poster</DECOPosterCat.label>
+  <!-- EN: A decorative poster. Hung up by one of your colonists. (Poster idea suggested by: pumacatrun2) -->
+  <DECOPosterCat.description>A decorative poster. Hung up by one of your colonists. (Poster idea suggested by: pumacatrun2)</DECOPosterCat.description>
+  <!-- EN: Hang In There! -->
+  <DECOPosterCat.comps.CompDecoration.decorationName>Hang In There!</DECOPosterCat.comps.CompDecoration.decorationName>
+  <!-- EN: decorative poster -->
+  <DECOPosterDogs.label>decorative poster</DECOPosterDogs.label>
+  <!-- EN: A decorative poster. Hung up by one of your colonists. (Poster idea suggested by: DatGuyWeis) -->
+  <DECOPosterDogs.description>A decorative poster. Hung up by one of your colonists. (Poster idea suggested by: DatGuyWeis)</DECOPosterDogs.description>
+  <!-- EN: The Poker Dogs -->
+  <DECOPosterDogs.comps.CompDecoration.decorationName>The Poker Dogs</DECOPosterDogs.comps.CompDecoration.decorationName>
+  <!-- EN: decorative poster -->
+  <DECOPosterEarth.label>decorative poster</DECOPosterEarth.label>
+  <!-- EN: A decorative poster. Hung up by one of your colonists. -->
+  <DECOPosterEarth.description>A decorative poster. Hung up by one of your colonists.</DECOPosterEarth.description>
+  <!-- EN: Our Home -->
+  <DECOPosterEarth.comps.CompDecoration.decorationName>Our Home</DECOPosterEarth.comps.CompDecoration.decorationName>
+  <!-- EN: decorative poster -->
+  <DECOPosterElectric.label>decorative poster</DECOPosterElectric.label>
+  <!-- EN: A decorative poster. Hung up by one of your colonists. (designed by: Spike Berd) -->
+  <DECOPosterElectric.description>A decorative poster. Hung up by one of your colonists. (designed by: Spike Berd)</DECOPosterElectric.description>
+  <!-- EN: The Lightning -->
+  <DECOPosterElectric.comps.CompDecoration.decorationName>The Lightning</DECOPosterElectric.comps.CompDecoration.decorationName>
+  <!-- EN: decorative poster -->
+  <DECOPosterMeteor.label>decorative poster</DECOPosterMeteor.label>
+  <!-- EN: A decorative poster. Hung up by one of your colonists. (Poster created by: Barbarossa) -->
+  <DECOPosterMeteor.description>A decorative poster. Hung up by one of your colonists. (Poster created by: Barbarossa)</DECOPosterMeteor.description>
+  <!-- EN: The End -->
+  <DECOPosterMeteor.comps.CompDecoration.decorationName>The End</DECOPosterMeteor.comps.CompDecoration.decorationName>
+  <!-- EN: decorative poster -->
+  <DECOPosterStar.label>decorative poster</DECOPosterStar.label>
+  <!-- EN: A decorative poster. Hung up by one of your colonists. -->
+  <DECOPosterStar.description>A decorative poster. Hung up by one of your colonists.</DECOPosterStar.description>
+  <!-- EN: The Original -->
+  <DECOPosterStar.comps.CompDecoration.decorationName>The Original</DECOPosterStar.comps.CompDecoration.decorationName>
+  <!-- EN: decorative poster -->
+  <DECOPosterUnity.label>decorative poster</DECOPosterUnity.label>
+  <!-- EN: A decorative poster. Hung up by one of your colonists. (designed by: Spike Berd) -->
+  <DECOPosterUnity.description>A decorative poster. Hung up by one of your colonists. (designed by: Spike Berd)</DECOPosterUnity.description>
+</LanguageData>

@@ -1,0 +1,12 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Release" />
+  </Configurations>
+  <Project Path="ColonistsDeco/ColonistsDeco.csproj" />
+  <Properties Name="ExtensibilityGlobals" Scope="PostLoad">
+    <Property Name="BuildVersion_AssemblyInfoFilename" Value="ColonistsDeco\Properties\AssemblyInfo.cs" />
+    <Property Name="BuildVersion_StartDate" Value="2000/1/1" />
+    <Property Name="BuildVersion_UpdateAssemblyVersion" Value="True" />
+    <Property Name="BuildVersion_UpdateFileVersion" Value="True" />
+  </Properties>
+</Solution>

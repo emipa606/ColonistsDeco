@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: decorative archo intelligence board -->
+  <DECOArchoIntelligenceBall.label>decorative archo intelligence board</DECOArchoIntelligenceBall.label>
+  <!-- EN: A decorative Archo intelligence ball. Hung up by one of your colonists. -->
+  <DECOArchoIntelligenceBall.description>A decorative Archo intelligence ball. Hung up by one of your colonists.</DECOArchoIntelligenceBall.description>
+  <!-- EN: Archo intelligence ball -->
+  <DECOArchoIntelligenceBall.comps.CompDecoration.decorationName>Archo intelligence ball</DECOArchoIntelligenceBall.comps.CompDecoration.decorationName>
+</LanguageData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: decorative brass shapes -->
+  <DECOBrassShapes.label>decorative brass shapes</DECOBrassShapes.label>
+  <!-- EN: Some decorative brass shapes. Hung up by one of your colonists. -->
+  <DECOBrassShapes.description>Some decorative brass shapes. Hung up by one of your colonists.</DECOBrassShapes.description>
+  <!-- EN: Brass shapes -->
+  <DECOBrassShapes.comps.CompDecoration.decorationName>Brass shapes</DECOBrassShapes.comps.CompDecoration.decorationName>
+</LanguageData>
