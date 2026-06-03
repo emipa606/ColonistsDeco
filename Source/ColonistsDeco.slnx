@@ -9,4 +9,40 @@
     <Property Name="BuildVersion_UpdateAssemblyVersion" Value="True" />
     <Property Name="BuildVersion_UpdateFileVersion" Value="True" />
   </Properties>
+  <Folder Name="/.github/">
+    <File Path="../.github/copilot-instructions.md" />
+  </Folder>
+  <Folder Name="/XML/1.6/Defs/Joy/JoyDefs/">
+    <File Path="../1.6/Defs/Joy/JoyDefs/JoyDef.xml" />
+  </Folder>
+  <Folder Name="/XML/1.6/Defs/ResearchDefs/">
+    <File Path="../1.6/Defs/ResearchDefs/DecoResearchProjects.xml" />
+    <File Path="../1.6/Defs/ResearchDefs/ResearchTabs.xml" />
+  </Folder>
+  <Folder Name="/XML/1.6/Defs/JobDefs/">
+    <File Path="../1.6/Defs/JobDefs/JobDef.xml" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/1.6/Defs/Joy/JoyKinds/">
+    <File Path="../1.6/Defs/Joy/JoyKinds/JoyKinds.xml" />
+  </Folder>
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/Keys.xml" />
+  </Folder>
+  <Folder Name="/XML/1.6/Defs/ThingDefs/Buildings/">
+    <File Path="../1.6/Defs/ThingDefs/Buildings/DECO_ArchoIntelligenceBall.xml" />
+    <File Path="../1.6/Defs/ThingDefs/Buildings/DECO_ArchoIntelligenceBoard.xml" />
+    <File Path="../1.6/Defs/ThingDefs/Buildings/DECO_BedsideBook.xml" />
+    <File Path="../1.6/Defs/ThingDefs/Buildings/DECO_BedsideBottle.xml" />
+    <File Path="../1.6/Defs/ThingDefs/Buildings/DECO_Boarhead.xml" />
+    <File Path="../1.6/Defs/ThingDefs/Buildings/DECO_BrassShapes.xml" />
+    <File Path="../1.6/Defs/ThingDefs/Buildings/DECO_Deerhead.xml" />
+    <File Path="../1.6/Defs/ThingDefs/Buildings/DECO_Dreamcatcher.xml" />
+    <File Path="../1.6/Defs/ThingDefs/Buildings/DECO_FeatherLine.xml" />
+    <File Path="../1.6/Defs/ThingDefs/Buildings/DECO_Paperball.xml" />
+    <File Path="../1.6/Defs/ThingDefs/Buildings/DECO_Poster.xml" />
+    <File Path="../1.6/Defs/ThingDefs/Buildings/DECO_Spikeball.xml" />
+  </Folder>
 </Solution>

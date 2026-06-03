@@ -31,7 +31,7 @@
       <isEdifice>false</isEdifice>
       <canPlaceOverWall>true</canPlaceOverWall>
     </building>
-    <rotatable>true</rotatable>
+    <rotatable>false</rotatable>
     <selectable>true</selectable>
     <destroyable>true</destroyable>
     <useHitPoints>true</useHitPoints>

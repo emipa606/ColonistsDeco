@@ -26,7 +26,7 @@
       <canPlaceOverWall>true</canPlaceOverWall>
     </building>
     <tickerType>Never</tickerType>
-    <rotatable>true</rotatable>
+    <rotatable>false</rotatable>
     <selectable>true</selectable>
     <destroyable>true</destroyable>
     <useHitPoints>true</useHitPoints>
