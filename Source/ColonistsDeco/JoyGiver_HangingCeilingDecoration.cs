@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using Verse;
 using Verse.AI;
@@ -51,15 +52,7 @@ internal class JoyGiver_HangingCeilingDecoration : JoyGiver
 
         IList<Thing> thingsInRoom = pawnRoom.ContainedAndAdjacentThings;
 
-        var ceilingDecorationAmount = 0;
-
-        foreach (var thingInRoom in thingsInRoom)
-        {
-            if (Utility.IsCeilingDeco(thingInRoom))
-            {
-                ceilingDecorationAmount++;
-            }
-        }
+        var ceilingDecorationAmount = thingsInRoom.Count(Utility.IsCeilingDeco);
 
         if (!pawn.CanReserveAndReach(ceilingLocation, PathEndMode.OnCell, Danger.None) ||
             ceilingDecorationAmount >= ColonistsDecoMain.Settings.ceilingDecorationLimit)

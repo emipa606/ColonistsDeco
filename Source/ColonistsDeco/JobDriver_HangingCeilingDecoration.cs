@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using Verse;
 using Verse.AI;
@@ -42,12 +43,9 @@ internal class JobDriver_HangingCeilingDecoration : JobDriver
                 IList<Thing> thingsInRoom = pawn.ownership.OwnedBed.GetRoom().ContainedAndAdjacentThings;
 
                 var possibleCeilingDecos = new List<ThingDef>(ceilingDecos);
-                foreach (var thingInRoom in thingsInRoom)
+                foreach (var thingInRoom in thingsInRoom.Where(Utility.IsCeilingDeco))
                 {
-                    if (Utility.IsCeilingDeco(thingInRoom))
-                    {
-                        possibleCeilingDecos.Remove(thingInRoom.def);
-                    }
+                    possibleCeilingDecos.Remove(thingInRoom.def);
                 }
 
                 var ceilingDeco = possibleCeilingDecos.Count > 0
@@ -57,10 +55,7 @@ internal class JobDriver_HangingCeilingDecoration : JobDriver
                 var thing = ThingMaker.MakeThing(ceilingDeco);
                 thing.SetFactionDirect(pawn.Faction);
                 var compDecoration = thing.TryGetComp<CompDecoration>();
-                if (compDecoration != null)
-                {
-                    compDecoration.decoratorCreator = pawn.Name.ToStringShort;
-                }
+                compDecoration?.decoratorCreator = pawn.Name.ToStringShort;
 
                 GenSpawn.Spawn(thing, PlaceInfo.Cell, Map, Rot4.North);
                 ReadyForNextToil();

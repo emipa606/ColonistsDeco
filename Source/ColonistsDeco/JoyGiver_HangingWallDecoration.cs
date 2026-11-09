@@ -42,12 +42,9 @@ internal class JoyGiver_HangingWallDecoration : JoyGiver
             }
 
             IList<Thing> wallTempThingList = wallLocation.GetThingList(pawnMap);
-            foreach (var wallThing in wallTempThingList)
+            foreach (var wallThing in wallTempThingList.Where(Utility.IsWall))
             {
-                if (Utility.IsWall(wallThing))
-                {
-                    wallThingList.Add(wallThing);
-                }
+                wallThingList.Add(wallThing);
             }
         }
 
@@ -58,15 +55,7 @@ internal class JoyGiver_HangingWallDecoration : JoyGiver
 
         IList<Thing> thingsInRoom = pawnRoom.ContainedAndAdjacentThings;
 
-        var wallDecoAmount = 0;
-
-        foreach (var thingInRoom in thingsInRoom)
-        {
-            if (Utility.IsWallDeco(thingInRoom))
-            {
-                wallDecoAmount++;
-            }
-        }
+        var wallDecoAmount = thingsInRoom.Count(Utility.IsWallDeco);
 
         var wall = wallThingList.RandomElement();
         var randomPlacePos = IntVec3.Invalid;

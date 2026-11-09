@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -80,12 +81,10 @@ internal class ColonistsDecoModSettings : ModSettings
             }
         }
 
-        foreach (var t in allThings)
+        foreach (var t in allThings.Where(thing =>
+                     Utility.IsWallDeco(thing) || Utility.IsCeilingDeco(thing) || Utility.IsBedsideDeco(thing)))
         {
-            if (Utility.IsWallDeco(t) || Utility.IsCeilingDeco(t) || Utility.IsBedsideDeco(t))
-            {
-                t.Destroy();
-            }
+            t.Destroy();
         }
     }
 }

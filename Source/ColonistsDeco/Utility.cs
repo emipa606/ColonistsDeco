@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using RimWorld;
 using Verse;
 
 namespace ColonistsDeco;
 
-internal class Utility
+internal static class Utility
 {
     private static readonly Dictionary<ThingDef, List<TechLevel>> thingTechProgression = new();
 
@@ -64,7 +65,7 @@ internal class Utility
             switch (currentDef.defName)
             {
                 case "Wall":
-                case var val when new Regex("(Smoothed)+").IsMatch(val):
+                case var val when new Regex("(Smoothed)+", RegexOptions.None, TimeSpan.FromSeconds(1)).IsMatch(val):
                     currentDef.comps.Add(attachableThingComp);
                     wallHashes.Add(currentDef.GetHashCode());
                     break;

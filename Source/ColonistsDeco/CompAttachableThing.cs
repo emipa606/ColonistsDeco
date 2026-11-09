@@ -10,16 +10,14 @@ internal class CompAttachableThing : ThingComp
     public override void CompTick()
     {
         base.CompTick();
+        if (attachedThings == null)
         {
-            if (attachedThings == null)
-            {
-                return;
-            }
+            return;
+        }
 
-            foreach (var thing in attachedThings)
-            {
-                thing.Position = parent.Position;
-            }
+        foreach (var thing in attachedThings)
+        {
+            thing.Position = parent.Position;
         }
     }
 

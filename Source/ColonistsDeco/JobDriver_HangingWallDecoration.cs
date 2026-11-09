@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using Verse;
 using Verse.AI;
@@ -48,12 +49,9 @@ public class JobDriver_HangingWallDecoration : JobDriver
                 IList<Thing> thingsInRoom = pawn.ownership.OwnedBed.GetRoom().ContainedAndAdjacentThings;
 
                 var possibleWallDecos = new List<ThingDef>(wallDecos);
-                foreach (var thingInRoom in thingsInRoom)
+                foreach (var thingInRoom in thingsInRoom.Where(Utility.IsCeilingDeco))
                 {
-                    if (Utility.IsCeilingDeco(thingInRoom))
-                    {
-                        possibleWallDecos.Remove(thingInRoom.def);
-                    }
+                    possibleWallDecos.Remove(thingInRoom.def);
                 }
 
                 var wallDeco = possibleWallDecos.Count > 0
@@ -64,10 +62,7 @@ public class JobDriver_HangingWallDecoration : JobDriver
 
                 thing.SetFactionDirect(pawn.Faction);
                 var compDecoration = thing.TryGetComp<CompDecoration>();
-                if (compDecoration != null)
-                {
-                    compDecoration.decoratorCreator = pawn.Name.ToStringShort;
-                }
+                compDecoration?.decoratorCreator = pawn.Name.ToStringShort;
 
                 WallInfo.Thing.TryGetComp<CompAttachableThing>().AddAttachment(thing);
                 GenSpawn.Spawn(thing, WallInfo.Cell, Map, pawn.Rotation.Opposite);
