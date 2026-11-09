@@ -1,12 +1,13 @@
-# [Colonists' Deco (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3511154027)
+# [[1.6] Colonists' Deco (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3511154027)
 
 ![Image](https://img.litet.net/logos/Info.png)
 
 Update of Abe Vrienss mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2558083020
 
-**The release of RimWorld 1.6 added improved support for [Asset Bundles](https://github.com/emipa606/AssetBuilder/blob/main/README.md)**.
-To avoid doubling the size of the mod, it was re-released using only Asset Bundles, you can find the previous version of this mod [here](https://steamcommunity.com/sharedfiles/filedetails/?id=2894674825).
+**The release of RimWorld 1.7 added a system where assets like textures and sounds can be cached to improve performance**.
+To avoid doubling the size of the mod, it was re-released with only this cache included, you can find the new version of this mod [here](https://steamcommunity.com/sharedfiles/filedetails/?id=3836952056).
+This version will not receive any further updates.
 
 - Should support more end-tables, as long as they dont already have a lamp on them
 
@@ -58,4 +59,4 @@ Current version - [V2.4.0]
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/ColonistsDeco?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3511154027) | tags: decorations, automation
+[![Image](https://img.shields.io/github/v/release/emipa606/ColonistsDeco?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3511154027) | automation, decorations

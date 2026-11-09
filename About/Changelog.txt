@@ -1,5 +1,8 @@
 # Changelog for ColonistsDeco
 
+1.6.2 - Last update of the AssetBundle version of the mod
+
+
 1.6.1 - Non-rotatable decorations should no longer rotate on gravship travels
 
 
