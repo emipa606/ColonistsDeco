@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+  
   <!-- EN: decorative paper ball -->
   <DECOPaperball.label>decorative paper ball</DECOPaperball.label>
   <!-- EN: A decorative paper ball. Hung up by one of your colonists. -->
   <DECOPaperball.description>A decorative paper ball. Hung up by one of your colonists.</DECOPaperball.description>
+  
 </LanguageData>
